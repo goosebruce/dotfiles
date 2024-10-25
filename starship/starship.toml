@@ -1,0 +1,204 @@
+# starship.toml
+
+add_newline = true
+palette = "nord"
+
+format = """
+[╭](fg:separator)\
+$status\
+$directory\
+$cmd_duration\
+$line_break\
+[╰](fg:separator)\
+$character\
+"""
+
+###########################################
+
+[palettes.default]
+prompt_ok = "#8047c1"
+prompt_err = "#e23140"
+icon = "#161514"
+separator = "#35312c"
+background = "#35312c"
+
+directory = "#9f31e2"
+duration = "#e26f31"
+status = "#e23140"
+
+###########################################
+
+[character]
+success_symbol = "[❯](fg:prompt_ok)"
+error_symbol = "[❯](fg:prompt_err)"
+
+[directory]
+format = "[─](fg:separator)[](fg:directory)[](fg:icon bg:directory)[](fg:directory bg:background)[ $path](bg:background)[](fg:background)"
+truncate_to_repo = false
+truncation_length = 0
+
+[status]
+format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:background)[ $status](bg:background)[](fg:background)"
+pipestatus = true
+pipestatus_separator = "-"
+pipestatus_segment_format = "$status"
+pipestatus_format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:background)[ $pipestatus](bg:background)[](fg:background)"
+disabled = false
+
+[cmd_duration]
+format = "[─](fg:separator)[](fg:duration)[󱐋](fg:icon bg:duration)[](fg:duration bg:background)[ $duration](bg:background)[](fg:background)"
+min_time = 1000
+
+[time]
+format = "[](fg:duration)[󰥔](fg:icon bg:duration)[](fg:duration bg:background)[ $time](bg:background)[](fg:background)"
+disabled = false
+
+
+# format = """
+# $directory\
+# $git_branch\
+# $git_status\
+# $fill\
+# $python\
+# $lua\
+# $nodejs\
+# $golang\
+# $haskell\
+# $rust\
+# $ruby\
+# $aws\
+# $docker_context\
+# $jobs\
+# $cmd_duration\
+# $line_break\
+# $character"""
+
+# continuation_prompt = '▶▶ '
+# right_format = """$all"""
+# add_newline = true
+# palette = "nord"
+
+# [directory]
+# style = 'bold fg:off_white'
+# repo_root_style = 'bold fg:green'
+# format = '[$path ]($style)'
+# home_symbol = '~'
+# truncation_length = 3
+# truncation_symbol = '…/'
+# truncate_to_repo = false
+
+# [directory.substitutions]
+# 'Documents' = '󰈙'
+# 'Downloads' = ' '
+# 'Music' = ' '
+# 'Pictures' = ' '
+
+# [git_branch]
+# style = 'fg:green'
+# symbol = ' '
+# format = '[on](white) [$symbol$branch ]($style)'
+
+# [git_status]
+# style = 'fg:red'
+# format = '([$all_status$ahead_behind]($style) )'
+
+# [fill]
+# style = 'fg:off_white'
+# symbol = '-'
+
+# [python]
+# style = 'teal'
+# symbol = ' '
+# format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+# pyenv_version_name = true
+# pyenv_prefix = ''
+
+# [lua]
+# format = '[$symbol($version )]($style)'
+# symbol = ' '
+
+# [nodejs]
+# style = 'blue'
+# symbol = ' '
+
+# [golang]
+# style = 'blue'
+# symbol = ' '
+
+# [haskell]
+# style = 'blue'
+# symbol = ' '
+
+# [rust]
+# style = 'orange'
+# symbol = ' '
+
+# [ruby]
+# style = 'blue'
+# symbol = ' '
+
+# [package]
+# symbol = '󰏗 '
+
+# [aws]
+# symbol = ' '
+# style = 'yellow'
+# format = '[$symbol($profile )(\[$duration\] )]($style)'
+
+# [docker_context]
+# symbol = ' '
+# style = 'fg:#06969A'
+# format = '[$symbol]($style) $path'
+# detect_files = ['docker-compose.yml', 'docker-compose.yaml', 'Dockerfile']
+# detect_extensions = ['Dockerfile']
+
+# [jobs]
+# symbol = ' '
+# style = 'red'
+# number_threshold = 1
+# format = '[$symbol]($style)'
+
+# [cmd_duration]
+# min_time = 500
+# style = 'fg:gray'
+# format = '[$duration]($style)'
+
+
+# [palettes.cust_dark]
+# black = '#272325'
+# white = '#FFF6E6'
+# red = '#BF616A'
+# green = '#A3BE8C'
+# yellow = '#EBCB8B'
+# purple = '#B48EAD'
+# cyan = '#66E0B9'
+# orange = '#D08770'
+# blue = '#66E0B9'
+# dark_blue = '#66E0B9'
+# gray = '#434C5E'
+
+
+[palettes.nord]
+prompt_ok = "#8047c1"
+prompt_err = "#e23140"
+icon = "#161514"
+separator = "#35312c"
+background = "#35312c"
+directory = "#9f31e2"
+duration = "#e26f31"
+status = "#e23140"
+
+
+# [palettes.onedark]
+# dark_blue = '#61afef'
+# off_white = '#FFF6E6'
+# blue = '#56b6c2'
+# red = '#e06c75'
+# green = '#98c379'
+# purple = '#c678dd'
+# cyan = '#56b6c2'
+# orange = '#be5046'
+# yellow = '#e5c07b'
+# gray = '#828997'
+# white = '#abb2bf'
+# black = '#2c323c'
