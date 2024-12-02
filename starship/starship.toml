@@ -8,6 +8,8 @@ format = """
 $status\
 $directory\
 $cmd_duration\
+$git_branch\
+$git_status\
 $line_break\
 [╰](fg:separator)\
 $character\
@@ -42,7 +44,7 @@ format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:st
 pipestatus = true
 pipestatus_separator = "-"
 pipestatus_segment_format = "$status"
-pipestatus_format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:background)[ $pipestatus](bg:background)[](fg:background)"
+pipestatus_format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:background)[ $pipestatus](bg:background)[](fg:background) "
 disabled = false
 
 [cmd_duration]
@@ -52,6 +54,13 @@ min_time = 1000
 [time]
 format = "[](fg:duration)[󰥔](fg:icon bg:duration)[](fg:duration bg:background)[ $time](bg:background)[](fg:background)"
 disabled = false
+
+[git_branch]
+symbol = ' '
+format = "[─](fg:separator)[](fg:green)[$symbol$branch](fg:icon bg:green)[](fg:green bg:background)"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
 
 
 # format = """
@@ -181,10 +190,11 @@ disabled = false
 [palettes.nord]
 prompt_ok = "#8047c1"
 prompt_err = "#e23140"
-icon = "#161514"
-separator = "#35312c"
+icon = "#333333"
+separator = "#66E0B9"
+accent = "#66E0B9"
 background = "#35312c"
-directory = "#9f31e2"
+directory = "#FFF6E6"
 duration = "#e26f31"
 status = "#e23140"
 

@@ -27,6 +27,7 @@ if [[ "$install_apps" == "y" ]]; then
     install_custom_formulae
     install_custom_casks
     run_brew_bundle
+    info "===================="
 fi
 
 printf "\n"

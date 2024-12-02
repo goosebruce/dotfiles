@@ -47,6 +47,9 @@ brew "eza"
 brew "zoxide"
 # Simple terminal UI for git commands
 brew "lazygit"
+# window manager
+cask nikitabobko/tap/aerospace
+
 # App to build and share containerized applications and microservices
 cask "docker"
 # Developer targeted fonts with a high number of glyphs

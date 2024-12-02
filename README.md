@@ -10,12 +10,11 @@ This repository contains my dotfiles, which are the config files and scripts I u
 - **Main Terminal**: [WezTerm](https://wezfurlong.org/wezterm/index.html)
 - **Shell Prompt**: [Starship](https://starship.rs/)
 - **Color Theme**: All themes are based on the [Nord color palette](https://www.nordtheme.com/docs/colors-and-palettes). Themes can be easily switched via environment variables set in `.zshenv`.
-- **Window Management**: [Rectangle](https://github.com/rxhanson/Rectangle) for resizing windows, paired with [Karabiner-Elements](https://karabiner-elements.pqrs.org/) for switching between applications.
 - **File Manager**: [Ranger](https://github.com/ranger/ranger)
 
 ## Custom Window Management
-
-I'm not a fan of the default window management solutions that macOS provides, like repeatedly pressing Cmd+Tab to switch apps or using the mouse to click and drag. To streamline my workflow, I created a custom window management solution using [Karabiner-Elements](https://karabiner-elements.pqrs.org/) and [Rectangle](https://rectangleapp.com/). By using these tools together, I can efficiently manage my windows and switch apps with minimal mental overhead and maximum speed, using only my keyboard. Here's how it works:
+- **AeroSpace**: [AeroSpace](https://github.com/aerokube/AeroSpace) for window management
+- **Sketchybar**: [Sketchybar](https://github.com/Kapeli/SketchyBar) for window management
 
 ### Tab Key as Hyperkey
 
@@ -44,7 +43,7 @@ Holding `Tab + E` enables an exposé layer, where other keys become shortcuts to
 To set up these dotfiles on your system, run:
 
 ```bash
-./install.sh
+source install.sh
 ```
 
 Then follow the on-screen prompts.
