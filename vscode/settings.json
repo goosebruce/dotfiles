@@ -2,7 +2,7 @@
   //
   // === Appearance ===
   //
-	"workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "workbench.iconTheme": "vscode-icons",
   "vsicons.presets.foldersAllDefaultIcon": true,
   "vsicons.presets.hideExplorerArrows": true,
@@ -14,12 +14,9 @@
   "editor.fontSize": 12,
   // "editor.fontFamily": "Fira Code,Menlo for Powerline",
   "editor.fontFamily": "Hack Nerd Font",
-  "workbench.statusBar.visible": true,
   "breadcrumbs.enabled": false,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  "window.commandCenter": false,
-  "workbench.layoutControl.enabled": false,
   "update.showReleaseNotes": false,
   "window.zoomLevel": 1.0,
   "editor.folding": false,
@@ -235,5 +232,32 @@
   "redhat.telemetry.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
-  "aws.telemetry": false
+  "aws.telemetry": false,
+  "snowflake.connectionsConfigFile": "/Users/nathan/Library/Application Support/snowflake/config.toml",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "github.copilot.editor.enableAutoCompletions": false,
+  "window.density.editorTabHeight": "compact",
+  "workbench.panel.showLabels": false,
+  "oneDarkPro.vivid": true,
+  "supermaven.otherWarning": false,
+  "supermaven.enable": {
+    "*": true
+  },
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "go.toolsManagement.autoUpdate": true,
+  "git.ignoreRebaseWarning": true,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "workbench.activityBar.location": "top",
+  "python.venvPath": ".venv",
+  "python.defaultInterpreterPath": "python3",
+  "vim.neovimUseConfigFile": true,
+  "snowflake.autocompleteVariantKeys.enabled": true,
+  "snowflake.autocompleteObjectDetails.enabled": true,
+  "snowflake.enableNativeAppPanel": true,
+  "snowflake.queryHistory.itemLimit": 500
 }

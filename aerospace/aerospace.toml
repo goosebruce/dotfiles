@@ -1,15 +1,13 @@
-after-startup-command = ['exec-and-forget sketchybar']
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = [
     '/bin/bash',
     '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
     'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0',
 ]
 
 # Start AeroSpace at login
-start-at-login = true
+start-at-login = falsesj
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -18,10 +16,10 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 30
+accordion-padding = 80s
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -41,14 +39,46 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodness#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
-# [[on-window-detected]]
-# if.app-id = 'com.apple.systempreferences'
-# if.app-name-regex-substring = 'settings'
-# if.window-title-regex-substring = 'substring'
-# if.workspace = 'workspace-name'
-# if.during-aerospace-startup = true
-# check-further-callbacks = true
-# run = ['layout floating', 'move-node-to-workspace S']  # The callback itself
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = ['move-node-to-workspace Browse']
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = ['move-node-to-workspace Browse']
+
+[[on-window-detected]]
+if.app-id = 'com.github.wez.wezterm'
+run = ['move-node-to-workspace Code']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = ['move-node-to-workspace Code']
+
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+run = ['move-node-to-workspace Code']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = ['move-node-to-workspace Social']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Mail'
+run = ['move-node-to-workspace Social']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Messages'
+run = ['move-node-to-workspace Social']
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = ['move-node-to-workspace Social']
+
+[[on-window-detected]]
+if.app-id = 'com.linear'
+run = ['move-node-to-workspace Organize']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'telegram'
@@ -137,16 +167,16 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
+alt-1 = 'workspace Browse'
+alt-2 = 'workspace Code'
+alt-3 = 'workspace Social'
+alt-4 = 'workspace Organize'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
+alt-shift-1 = 'move-node-to-workspace Browse --focus-follows-window'
+alt-shift-2 = 'move-node-to-workspace Code --focus-follows-window'
+alt-shift-3 = 'move-node-to-workspace Social --focus-follows-window'
+alt-shift-4 = 'move-node-to-workspace Organize --focus-follows-window'
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -156,6 +186,7 @@ alt-shift-semicolon = 'mode service'
 alt-shift-enter = 'mode apps'
 
 alt-t = 'exec-and-forget open -a /Applications/Wezterm.app'
+alt-f = 'exec-and-forget open -a /Applications/Linear.app'
 alt-z = 'exec-and-forget open -a /Applications/Zed.app'
 alt-c = 'exec-and-forget open -a /Applications/chatGPT.app'
 alt-s = 'exec-and-forget open -a /Applications/Safari.app'

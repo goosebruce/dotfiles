@@ -14,6 +14,13 @@ eval "$(pyenv init -)" # Initialize pyenv when a new shell spawns
 export PATH="$HOME/.local/bin:$PATH"
 # alias poetry_shell='. "$(dirname $(poetry run which python))/activate"'
 
+# go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 # Starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"

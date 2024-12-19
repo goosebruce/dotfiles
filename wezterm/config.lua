@@ -26,20 +26,6 @@ config = {
         bottom = 10,
     },
     background = {
-        -- {
-        --     source = {
-        --         File = "/Users/" .. os.getenv("USER") .. "/.config/wezterm/dark-desert.jpg",
-        --     },
-        --     hsb = {
-        --         hue = 1.0,
-        --         saturation = 1.02,
-        --         brightness = 0.25,
-        --         opacity = .5
-        --     },
-        --     -- attachment = { Parallax = 0.3 },
-        --     -- width = "100%",
-        --     -- height = "100%",
-        -- },
         {
             source = {
                 Color = "#272325",

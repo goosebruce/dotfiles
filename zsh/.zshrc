@@ -15,3 +15,6 @@ zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 
 
+
+# sst
+export PATH=/Users/nathan/.sst/bin:$PATH

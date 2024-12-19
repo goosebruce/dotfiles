@@ -19,7 +19,11 @@ export VISUAL="nvim"
 # Add /usr/local/bin to the beginning of the PATH environment variable.
 # This ensures that executables in /usr/local/bin are found before other directories in the PATH.
 export PATH="/usr/local/bin:$PATH"
-
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 # Set LDFLAGS environment variable for the linker to use the specified directories for library files.
 # This is useful when building software that depends on non-standard library locations, like zlib and bzip2 in this case.
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
@@ -30,3 +34,4 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 # Hide computer name in terminal
 export DEFAULT_USER="$(whoami)"
+. "$HOME/.cargo/env"

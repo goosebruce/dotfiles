@@ -4,6 +4,30 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- LazyVim auto format
+vim.g.autoformat = true
+
+-- Snacks animations
+-- Set to `false` to globally disable all snacks animations
+vim.g.snacks_animate = true
+
+-- LazyVim picker to use.
+-- Can be one of: telescope, fzf
+-- Leave it to "auto" to automatically use the picker
+-- enabled with `:LazyExtras`
+vim.g.lazyvim_picker = "fz"
+
+-- LazyVim completion engine to use.
+-- Can be one of: nvim-cmp, blink.cmp
+-- Leave it to "auto" to automatically use the completion engine
+-- enabled with `:LazyExtras`
+vim.g.lazyvim_cmp = "blink.cmp"
+
+-- if the completion engine supports the AI source,
+-- use that instead of inline suggestions
+vim.g.ai_cmp = true
+
+
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
@@ -100,13 +124,13 @@ vim.keymap.set('n', '<leader>Y', [["+Y]])
 local diagnostics_active = true
 
 vim.keymap.set('n', '<leader>do', function()
-  diagnostics_active = not diagnostics_active
+    diagnostics_active = not diagnostics_active
 
-  if diagnostics_active then
-    vim.diagnostic.enable(0)
-  else
-    vim.diagnostic.disable(0)
-  end
+    if diagnostics_active then
+        vim.diagnostic.enable(0)
+    else
+        vim.diagnostic.disable(0)
+    end
 end)
 
 -- Diagnostic keymaps
