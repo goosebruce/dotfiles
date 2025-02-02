@@ -1,62 +1,94 @@
--- Standalone plugins with less than 10 lines of config go here
 return {
   {
-    -- tmux & split window navigation
+    'supermaven-inc/supermaven-nvim',
+    config = function()
+      require('supermaven-nvim').setup {
+        ignore_filetypes = { '.env' },
+        log_level = 'off',
+        color = {
+          suggestion_color = '#fffff0',
+          cterm = 244,
+        },
+      }
+    end,
+  },
+  {
+    '3fonov/dbt-nvim',
+  },
+  {
     'christoomey/vim-tmux-navigator',
-  },
-  {
-    -- autoclose tags
-    'windwp/nvim-ts-autotag',
-  },
-  {
-    -- detect tabstop and shiftwidth automatically
-    'tpope/vim-sleuth',
-  },
-  {
-    -- Powerful Git integration for Vim
-    'tpope/vim-fugitive',
-  },
-  {
-    -- GitHub integration for vim-fugitive
-    'tpope/vim-rhubarb',
-  },
-  {
-    -- Hints keybinds
-    'folke/which-key.nvim',
-    opts = {
-      -- win = {
-      --   border = {
-      --     { '┌', 'FloatBorder' },
-      --     { '─', 'FloatBorder' },
-      --     { '┐', 'FloatBorder' },
-      --     { '│', 'FloatBorder' },
-      --     { '┘', 'FloatBorder' },
-      --     { '─', 'FloatBorder' },
-      --     { '└', 'FloatBorder' },
-      --     { '│', 'FloatBorder' },
-      --   },
-      -- },
+    cmd = {
+      'TmuxNavigateLeft',
+      'TmuxNavigateDown',
+      'TmuxNavigateUp',
+      'TmuxNavigateRight',
+      'TmuxNavigatePrevious',
+      'TmuxNavigatorProcessList',
+    },
+    keys = {
+      { '<c-h>', '<cmd><C-U>TmuxNavigateLeft<cr>' },
+      { '<c-j>', '<cmd><C-U>TmuxNavigateDown<cr>' },
+      { '<c-k>', '<cmd><C-U>TmuxNavigateUp<cr>' },
+      { '<c-l>', '<cmd><C-U>TmuxNavigateRight<cr>' },
+      { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
     },
   },
   {
-    -- Autoclose parentheses, brackets, quotes, etc.
-    'windwp/nvim-autopairs',
-    event = 'InsertEnter',
-    config = true,
-    opts = {},
+    'nvim-neo-tree/neo-tree.nvim',
+    enabled = false,
   },
-  {
-    -- Highlight todo, notes, etc in comments
-    'folke/todo-comments.nvim',
-    event = 'VimEnter',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    opts = { signs = false },
-  },
-  {
-    -- high-performance color highlighter
-    'norcalli/nvim-colorizer.lua',
-    config = function()
-      require('colorizer').setup()
-    end,
-  },
+
+  -- {
+  --   'stevearc/conform.nvim',
+  --   event = { 'BufWritePre' },
+  --   cmd = { 'ConformInfo' },
+  --   keys = {
+  --     {
+  --       -- Customize or remove this keymap to your liking
+  --       '<leader> cf',
+  --       function()
+  --         require('conform').format { async = true }
+  --       end,
+  --       mode = '',
+  --       desc = 'Format buffer',
+  --     },
+  --   },
+  --   -- This will provide type hinting with LuaLS
+  --   ---@module "conform"
+  --   ---@type conform.setupOpts
+  --   opts = {
+  --     -- Define your formatters
+  --     formatters_by_ft = {
+  --       go = { 'gofmt' },
+  --       lua = { 'stylua' },
+  --       python = { 'ruff' },
+  --       javascript = { 'prettier', stop_after_first = true },
+  --     },
+  --     -- Set default options
+  --     default_format_opts = {
+  --       lsp_format = 'fallback',
+  --     },
+  --     -- Customize formatters
+  --     formatters = {
+  --       shfmt = {
+  --         prepend_args = { '-i', '2' },
+  --       },
+  --     },
+  --   },
+  --   init = function()
+  --     -- If you want the formatexpr, here is the place to set it
+  --     vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+  --   end,
+  -- },
+  -- {
+  --   'olexsmir/gopher.nvim',
+  --   ft = 'go',
+  --   dependencies = {
+  --     'nvim-lua/plenary.nvim',
+  --     'nvim-treesitter/nvim-treesitter',
+  --     -- 'mfussenegger/nvim-dap', -- (optional) only if you use `gopher.dap`
+  --   },
+  --   ---@type gopher.Config
+  --   opts = {},
+  -- },
 }

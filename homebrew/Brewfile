@@ -9,6 +9,8 @@ brew "awscli"
 brew "cmake"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# TMUX
+brew "tmux"
 # GNU compiler collection
 brew "gcc"
 # Fast, highly customisable system info script
@@ -60,29 +62,5 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
 # Grammarly for desktop
 cask "grammarly-desktop"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-vscode "eamodio.gitlens"
-vscode "esbenp.prettier-vscode"
-vscode "mechatroner.rainbow-csv"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-python.black-formatter"
-vscode "ms-python.flake8"
-vscode "ms-python.isort"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-toolsai.jupyter"
-vscode "ms-toolsai.jupyter-keymap"
-vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "mtxr.sqltools"
-vscode "redhat.vscode-yaml"
-vscode "vscode-icons-team.vscode-icons"
-vscode "vscodevim.vim"
-vscode "ZainChen.json"
-vscode "zhuangtongfa.material-theme"

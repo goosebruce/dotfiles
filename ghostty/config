@@ -1,0 +1,25 @@
+theme = rose-pine
+
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
+font-style = bold
+font-style-italic = false
+font-style-bold-italic = false
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 1.5
+
+background-opacity = 0.9
+
+background-blur-radius = 20
+
+confirm-close-surface = false
+
+window-decoration = false
+window-padding-balance = true
+macos-non-native-fullscreen = true
+
+macos-titlebar-style = transparent
+keybind = cmd+s>r=reload_config
+
+copy-on-select = clipboard
