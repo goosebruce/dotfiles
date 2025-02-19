@@ -1,5 +1,6 @@
 .DS_Store
-*/.zshenv
+.archive*
+.zshenv
 .env
 wezterm/*.jpg
 wezterm/*.png
