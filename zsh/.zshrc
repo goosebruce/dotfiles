@@ -166,3 +166,4 @@ function vi-yank-xclip {
 
 zle -N vi-yank-xclip
 bindkey -M vicmd 'y' vi-yank-xclip
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"

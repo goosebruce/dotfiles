@@ -67,12 +67,6 @@ apply_osx_system_defaults() {
   # Do not rearrange spaces automatically
   defaults write com.apple.dock "mru-spaces" -bool false
 
-  # Set Dock autohide
-  defaults write com.apple.dock autohide -bool true
-  defaults write com.apple.dock largesize -float 128
-  defaults write com.apple.dock "minimize-to-application" -bool true
-  defaults write com.apple.dock tilesize -float 32
-
 }
 
 if [ "$(basename "$0")" = "$(basename "${BASH_SOURCE[0]}")" ]; then

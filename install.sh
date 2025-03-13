@@ -3,7 +3,6 @@
 . scripts/prerequisites.sh
 . scripts/brew-install-custom.sh
 . scripts/osx-defaults.sh
-. scripts/symlinks.sh
 
 info "Dotfiles intallation initialized..."
 read -p "Install apps? [y/n] " install_apps
@@ -23,8 +22,6 @@ if [[ "$install_apps" == "y" ]]; then
   info "Apps"
   info "===================="
 
-  install_custom_formulae
-  install_custom_casks
   run_brew_bundle
   info "===================="
 fi
@@ -42,7 +39,7 @@ info "===================="
 info "Terminal"
 info "===================="
 
-info "Adding .hushlogin file to suppress 'last login' message in terminal..."
+info "Adding .hushlogin"
 touch ~/.hushlogin
 
 printf "\n"
@@ -50,11 +47,6 @@ info "===================="
 info "Symbolic Links"
 info "===================="
 
-chmod +x ./scripts/symlinks.sh
-if [[ "$overwrite_dotfiles" == "y" ]]; then
-  warning "Deleting existing dotfiles..."
-  ./scripts/symlinks.sh --delete --include-files
-fi
-
 stow .
+
 success "Dotfiles set up successfully."

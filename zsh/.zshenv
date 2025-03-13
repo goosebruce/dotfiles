@@ -23,10 +23,10 @@ export DEFAULT_USER="$(whoami)"
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
-export GOPRIVATE='github.com/extropy-360/*'
 export GOPRIVATE='github.com/signalflare-ai/*'
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
 export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=TRUE
+export HOMEBREW_NO_ENV_HINTS
 
 . "$HOME/.cargo/env"

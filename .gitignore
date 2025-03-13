@@ -6,3 +6,6 @@ wezterm/*.jpg
 wezterm/*.png
 work.zsh
 *secret*.*
+zsh/.zsh_sessions
+zsh/.zsh_history
+zsh/.zcompdump

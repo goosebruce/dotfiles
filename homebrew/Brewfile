@@ -1,9 +1,15 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
+tap "homebrew/cask-fonts"
 # Library for command-line editing
 brew "readline"
+
+brew "go"
+brew "python"
+brew
+#nvim
+brew "neovim"
 # Official Amazon AWS command-line interface
+brew "go"
 brew "awscli"
 # Cross-platform make
 brew "cmake"
@@ -13,8 +19,6 @@ brew "fzf"
 brew "tmux"
 # GNU compiler collection
 brew "gcc"
-# Fast, highly customisable system info script
-brew "neofetch"
 # Platform built on V8 to build network applications
 brew "node"
 # Python version management
@@ -23,8 +27,6 @@ brew "uv"
 brew "ranger"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # Access X11 clipboards from the command-line
 brew "xclip"
 # General-purpose lossless data-compression library
@@ -38,11 +40,9 @@ brew "starship"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3", link: false
 # Object-relational database system
-brew "postgresql@14"
+brew "postgresql@17" 
 # Command-line interface for SQLite
 brew "sqlite"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
 # Modern, maintained replacement for ls
 brew "eza"
 # A better cd command
@@ -50,7 +50,9 @@ brew "zoxide"
 # Simple terminal UI for git commands
 brew "lazygit"
 # window manager
-cask nikitabobko/tap/aerospace
+brew "lazydocker"
+
+cask "nikitabobko/tap/aerospace"
 
 # App to build and share containerized applications and microservices
 cask "docker"
@@ -60,7 +62,7 @@ cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 # Developer targeted fonts with a high number of glyphs
 cask "font-symbols-only-nerd-font"
-# Grammarly for desktop
-cask "grammarly-desktop"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+
+cask "snowflake-snowsql"
