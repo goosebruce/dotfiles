@@ -9,3 +9,4 @@ work.zsh
 zsh/.zsh_sessions
 zsh/.zsh_history
 zsh/.zcompdump
+zsh/.zshenv
