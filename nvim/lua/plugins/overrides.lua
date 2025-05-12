@@ -44,6 +44,35 @@ return {
   -- }
   --
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        basedpyright = {
+          settings = {
+            basedpyright = {
+              analysis = {
+                typeCheckingMode = "standard",
+                useLibraryCodeForTypes = true,
+                diagnosticMode = "workspace",
+                autoSearchPath = true,
+                inlayHints = {
+                  callArgumentNames = true,
+                },
+                extraPaths = {
+                  "...",
+                  "...",
+                },
+              },
+              python = {
+                venv = ".venv",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  {
     "supermaven-inc/supermaven-nvim",
     ---@module 'supermaven'
     opts = {
