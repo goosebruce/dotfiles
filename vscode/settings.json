@@ -25,7 +25,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
   "workbench.tree.renderIndentGuides": "none",
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "workbench.statusBar.visible": false,
   "workbench.editor.showTabs": "single",
   "workbench.tips.enabled": false,

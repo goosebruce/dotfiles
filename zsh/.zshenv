@@ -26,7 +26,9 @@ export PATH=$PATH:$GOBIN
 export GOPRIVATE='github.com/signalflare-ai/*'
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=TRUE
 export HOMEBREW_NO_ENV_HINTS
-
+export PATH="/opt/homebrew/opt/node/bin:$PATH"
 . "$HOME/.cargo/env"

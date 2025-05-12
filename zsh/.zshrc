@@ -90,8 +90,15 @@ alias cat="bat"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-# go
+# harlequin
+alias db="harlequin --config-path $HOME/.config/harlequin/config.toml --profile main"
 
+# k8
+alias k="kubectl"
+alias kns="kubens"
+alias kctx="kubectx"
+
+# go
 # export GOBIN=$GOPATH/bin
 # export GOROOT="$(brew --prefix golang)/libexec"
 # export PATH=$PATH:$GOPATH/bin
@@ -116,7 +123,6 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 export FZF_DEFAULT_OPTS="--height 50% --layout=default --border --color=hl:#2dd4bf"
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --icons=always --tree --color=always {} | head -200'"
-
 
 # zoxide - a better cd command
 eval "$(zoxide init zsh)"
