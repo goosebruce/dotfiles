@@ -1,0 +1,8 @@
+default_profile = "main"
+[profiles.main]
+adapter = "duckdb"
+theme = "tokyo-night"
+limit = 1000
+keymap_name = ['vim']
+show_s3 = "'all'"
+conn_str = ["duckdb/main_db.db"]
